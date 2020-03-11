@@ -13,20 +13,29 @@ const getMovies =(busqueda)=>{
         mymovies.innerHTML='';
         const peliculas =res.results;
         for (const pelicula of peliculas) {
-            mymovies.innerHTML+=
-            `
+            const imagen = pelicula.poster_path ? `
+                <img src="http://image.tmdb.org/t/p/w185${pelicula.poster_path}" alt="imagen de la pelicula" id=imageaviable>`:'<img src="/img/imagenotaviable.jpg" class=imagenotaviable>'
+                mymovies.innerHTML+= `
+            
+            
+            <div class="showmovies">
+            <div class="title">
             <h1>${pelicula.original_title}</h1>
+            <div class="contentfit">
             <div class="imagemovie">
-            <img src="http://image.tmdb.org/t/p/w185${pelicula.poster_path}" alt="imagen de la pelicula">
-            </div>
+            ${imagen}
             <div class="resume">
             <h3>${pelicula.overview}<h3>
-            </div>
             <h4>${pelicula.release_date}<h4>
+            </div>
+            </div>
+            </div>
+            <div class="vote">
             <h5>${pelicula.vote_average}<h5>
-            <h5>${pelicula.original_language}</h6>
+            </div>
+           </div>
+           </div>
             ` 
         }
     })
 }
-    
