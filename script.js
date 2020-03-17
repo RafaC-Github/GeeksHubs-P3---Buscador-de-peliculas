@@ -26,7 +26,7 @@ const getMovies = (busqueda) => {
             const peliculas = res.results;
             for (const pelicula of peliculas) {
                 const imagen = pelicula.poster_path ? `
-                <img src="http://image.tmdb.org/t/p/w185${pelicula.poster_path}" alt="imagen de la pelicula" class=imageaviable>` : '<img src=""/img/imagenotaviable.jpg"" class=imagenotaviable>'
+                <img src="http://image.tmdb.org/t/p/w185${pelicula.poster_path}" alt="imagen de la pelicula" class=imageaviable>` : '<img src="./img/imagenotaviable.jpg" class=imagenotaviable>'
                 mymovies.innerHTML += `
                     
                         
@@ -39,6 +39,7 @@ const getMovies = (busqueda) => {
                         ${imagen}
                         <div class="resume">
                             ${pelicula.overview}
+                            </br>
                             ${pelicula.release_date}
                         </div>
                         </div>
