@@ -32,18 +32,18 @@ const getMovies = (busqueda) => {
                         
                 <div class="headmovie">
                 <div class="titulo">
-                    <h5 class="text-center" >${pelicula.title}</h4>
+                    ${pelicula.title}
                 </div>
                     <div class="centered">
                     <div class="imagemovie">
                         ${imagen}
                         <div class="resume">
-                            <h5>${pelicula.overview}<h5>
-                            <h5>${pelicula.release_date}<h5> 
+                            ${pelicula.overview}
+                            ${pelicula.release_date}
                         </div>
                         </div>
                         <div class="voteaverage">
-                        <h5 class="text-center">${pelicula.vote_average}<h5>   
+                        ${pelicula.vote_average}  
                         </div>
                         <div class="buttontrailer"                 
                         <a onclick="getTrailer(${pelicula.id})"><button  value=${pelicula.id}  id="buttonmodal" class="btn btn-outline-dark" data-toggle="modal" data-target="#exampleModal">Trailer</button></a>

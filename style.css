@@ -13,6 +13,7 @@
     max-width: 100%; 
     width: auto !important; 
     display: inline-block; 
+    resize: both;
     }
 
 .voteaverage{
@@ -23,7 +24,7 @@
     display: grid;
     justify-content: center;
     margin-top: 5px;
-    margin-bottom: 25px;
+    margin-bottom: 35px;
 }
 
 .has-search .form-control {
@@ -34,16 +35,26 @@
     position: absolute;
     display: block;
     line-height: 2.375rem;
-    text-align: center;
+    text-align: justify;
     pointer-events: none;
 }
 
 
 .titulo{
     height: 60px;
+    text-align: center;
+    text-justify: distribute-all-lines;
+    margin-bottom: 4px;
+    font-size: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 .centered{
+    display: grid;
+    justify-content: center;
+}
+.voteaverage{
     display: grid;
     justify-content: center;
 }
@@ -71,6 +82,7 @@
 
 .resume {
     padding: 5px;
+    font-size: 20px;
     opacity: 0;
     position: absolute;
     top: 0;
@@ -101,18 +113,104 @@
 }
 
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:1000px) {
 
-    .centered{
-        display: grid;
-        justify-content: center;
+    .videoyt{
+        width: 460px;
+        height: 259px;
     }
-
-    .mymovies{
-        display: grid;  
-            }
-
+ .imageaviable{
+        height: 225px;
+        width: 150px;
+    }
+    .titulo{
+        font-size: 17px;
+    }
 
         
 
 } 
+@media screen and (max-width:820px) {
+
+    .titulo{
+        font-size: 15px;
+    }
+    .resume{
+        font-size: 17px;
+    }
+}
+@media screen and (max-width:750px){
+    .videoyt{
+        width: 460px;
+        height: 259px;
+    }
+ .imageaviable{
+        height: 195px;
+        width: 130px;
+    }
+    .titulo{
+        font-size: 15px;
+    }
+    .resume{
+        font-size: 15px;
+    }
+   
+
+}
+@media screen and (max-width:630px){
+    .mymovies{
+        display: grid;
+        grid-template-columns: 33% 33% 33% !important;
+    }
+
+    .videoyt{
+        width: 460px;
+        height: 259px;
+    }
+ .imageaviable{
+        height: 195px;
+        width: 130px;
+    }
+    .titulo{
+        font-size: 13px;
+    }
+    .resume{
+        font-size: 12px;
+    }
+   
+
+}
+@media screen and (max-width:500px){
+    .videoyt{
+        width: 360px;
+        height: 203px;
+
+    }
+}
+@media screen and (max-width:430px){
+    .mymovies{
+        display: grid;
+        grid-template-columns: 50% 50% !important;
+    }
+
+    .videoyt{
+        width: 300px;
+        height: 169px;
+    }
+ .imageaviable{
+        height: 195px;
+        width: 130px;
+    }
+    .titulo{
+        font-size: 13px;
+    }
+   
+
+}
+@media screen and (max-width:355px){
+    .videoyt{
+        width: 200px;
+        height: 113px;
+
+    }
+}
